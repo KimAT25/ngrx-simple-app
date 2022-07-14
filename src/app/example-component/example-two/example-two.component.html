@@ -1,0 +1,14 @@
+<ng-container *ngIf="!(spinner$ | async); else loading">
+  <div class="component">
+    <h2>Component 2</h2>
+
+    <p>Count: {{ count$ | async }}</p>
+    <p>Message: {{ message$ | async }}</p>
+
+    <button (click)="getDataFromAPI()">Click</button>
+  </div>
+</ng-container>
+
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>
